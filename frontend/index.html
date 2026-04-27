@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Dashboard | Forex Prop Firm</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <i class="fa-solid fa-chart-line"></i> FORFX DASH
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-house"></i> Team Overview
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-headset"></i> Live Calls
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-file-invoice-dollar"></i> Conversion Reports
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="user-profile">
+                    <button id="logout-btn" class="logout-btn">Logout</button>
+                    <span><strong id="user-name">Supervisor</strong> (<span id="user-role">Role</span>)</span>
+                    <div class="avatar" id="user-avatar">S</div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="welcome-msg">
+                    <h1>Daily Performance Overview</h1>
+                    <p style="color: var(--text-secondary);">Tracking real-time metrics for the Sales Call Team.</p>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Widgets... -->
+                    <!-- (keeping existing widgets for brevity, will add leads below) -->
+                </div>
+
+                <!-- Leads Management Section -->
+                <section class="leads-section card">
+                    <div class="card-header">
+                        <h2>Sales Leads Management</h2>
+                        <button id="show-add-lead-btn" class="btn btn-sm">Add New Lead</button>
+                    </div>
+
+                    <div id="lead-form-container" style="display: none; margin-bottom: 20px;">
+                        <h3 id="form-title" style="margin-bottom: 1rem;">Add New Lead</h3>
+                        <form id="lead-form">
+                            <input type="hidden" id="lead-id">
+                            <div class="form-group-row">
+                                <div class="input-item">
+                                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Client Name</label>
+                                    <input type="text" id="client_name" placeholder="John Doe" required style="width: 100%;">
+                                </div>
+                                <div class="input-item">
+                                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Phone</label>
+                                    <input type="text" id="phone_number" placeholder="+12345678" required style="width: 100%;">
+                                </div>
+                                <div class="input-item">
+                                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Country</label>
+                                    <input type="text" id="country" placeholder="USA" required style="width: 100%;">
+                                </div>
+                                <div class="input-item">
+                                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Status</label>
+                                    <select id="status" style="width: 100%;">
+                                        <option value="New">New</option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="Interested">Interested</option>
+                                        <option value="Closed">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="input-item">
+                                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Agent</label>
+                                    <input type="text" id="assigned_agent" placeholder="Agent Name" style="width: 100%;">
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button type="submit" class="btn btn-sm">Save</button>
+                                    <button type="button" id="cancel-lead-btn" class="btn btn-sm btn-secondary">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div style="overflow-x: auto;">
+                        <table class="leads-table">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Phone</th>
+                                    <th>Country</th>
+                                    <th>Status</th>
+                                    <th>Agent</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leads-body">
+                                <!-- Leads will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>

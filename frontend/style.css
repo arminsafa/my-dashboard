@@ -300,3 +300,109 @@ header {
     min-height: 10px;
     transition: height 0.5s ease-out;
 }
+
+/* Leads Management Styling */
+.leads-section {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.leads-table th, .leads-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.leads-table th {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.leads-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-new { background: #3b82f6; color: white; }
+.status-contacted { background: #f59e0b; color: white; }
+.status-interested { background: #10b981; color: white; }
+.status-closed { background: #6366f1; color: white; }
+
+.actions-cell {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    width: auto;
+}
+
+.btn-secondary {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.btn-edit { color: var(--primary-accent); cursor: pointer; background: none; border: none; }
+.btn-delete { color: #ef4444; cursor: pointer; background: none; border: none; }
+
+#lead-form-container {
+    background-color: #0f172a;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    align-items: end;
+}
+
+.form-group-row input, .form-group-row select {
+    padding: 0.6rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: white;
+    border-radius: 4px;
+    outline: none;
+}
+
+.logout-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
