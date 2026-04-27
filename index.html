@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Dashboard | Forex Prop Firm</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <i class="fa-solid fa-chart-line"></i> FORFX DASH
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-house"></i> Team Overview
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-headset"></i> Live Calls
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-file-invoice-dollar"></i> Conversion Reports
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="user-profile">
+                    <span><strong>Supervisor</strong></span>
+                    <div class="avatar">S</div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="welcome-msg">
+                    <h1>Daily Performance Overview</h1>
+                    <p style="color: var(--text-secondary);">Tracking real-time metrics for the Sales Call Team.</p>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Widget 1: Team Conversion Rate -->
+                    <div class="card">
+                        <div class="card-title">Team Conversion Rate</div>
+                        <div class="stat-value">15.5%</div>
+                        <div class="stat-trend trend-up">
+                            <i class="fa-solid fa-arrow-up"></i> 2.4% from yesterday
+                        </div>
+                    </div>
+
+                    <!-- Widget 2: Active Calls -->
+                    <div class="card">
+                        <div class="card-title">Active Calls (Live)</div>
+                        <div class="stat-value" id="active-calls-count">12</div>
+                        <div class="stat-trend">
+                            <span style="display:inline-block; width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-right: 5px; animation: pulse 1.5s infinite;"></span>
+                            Agents online
+                        </div>
+                    </div>
+
+                    <!-- Widget 3: Daily Lead Volume -->
+                    <div class="card">
+                        <div class="card-title">Daily Lead Volume</div>
+                        <div class="stat-value">482</div>
+                        <div class="chart-container">
+                            <div class="chart-bar" data-height="40"></div>
+                            <div class="chart-bar" data-height="65"></div>
+                            <div class="chart-bar" data-height="50"></div>
+                            <div class="chart-bar" data-height="85"></div>
+                            <div class="chart-bar" data-height="70"></div>
+                            <div class="chart-bar" data-height="95"></div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 4: Top Performing Agent -->
+                    <div class="card">
+                        <div class="card-title">Top Performing Agents</div>
+                        <div class="leaderboard-list">
+                            <div class="agent-row">
+                                <div class="agent-info">
+                                    <div class="rank top-1">1</div>
+                                    <span>Sarah Jenkins</span>
+                                </div>
+                                <span>24 Deals</span>
+                            </div>
+                            <div class="agent-row">
+                                <div class="agent-info">
+                                    <div class="rank">2</div>
+                                    <span>Michael Ross</span>
+                                </div>
+                                <span>21 Deals</span>
+                            </div>
+                            <div class="agent-row">
+                                <div class="agent-info">
+                                    <div class="rank">3</div>
+                                    <span>Elena Varez</span>
+                                </div>
+                                <span>18 Deals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>
